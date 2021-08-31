@@ -1,1 +1,4 @@
-# classification_calcium
+Here we use the in vivo imaging data to classify the sensory neurons ('small', 'large', 'medium) based their calcium response to different types of pain stimulus. 
+First we ranked the feature importances with a forest of trees and fed the extracted features (3 out 9) based to logisitic regression (LC), random forest (RF), support vector machines (SVMs), extreme gradient boosting (XGBoost), and multilayer perceptron (MLP) classifiers as input. 
+Because the imbalance of the dataset, later we use oversampling to improve the performance and scalability of the classifiers. 
+In our experiments, we use training and testing splitting (holdout method), and cross-validation (K-Fold) to measure the performance of the modeling results through the common confusion matrix rates such as accuracy, True-positive rate (TPR, or recall, sensitivity), True-negative rate (TNR, or specificity) and F1 Score. We used grid search to find the best parameters. The results show that RF and XGBoost has significantly higher accuracy and F1 Score than other models models.
